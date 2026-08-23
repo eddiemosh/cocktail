@@ -37,7 +37,15 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     description: "Zesty tequila favourite with salt rim",
     emoji: "🍋",
     colour: "from-yellow-400 to-lime-500",
-    imageUrl: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&q=80",
+  },
+  {
+    id: "limoncello-spritz",
+    name: "Limoncello Spritz",
+    description: "Lemony Italian liqueur with sparkling citrus and berries",
+    emoji: "🍋",
+    colour: "from-yellow-300 to-orange-400",
+    imageUrl: "https://images.unsplash.com/photo-1556855810-ac404aa91e85?w=400&q=80",
   },
   {
     id: "pina-colada",
@@ -61,7 +69,7 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     description: "Rich vodka & coffee cocktail",
     emoji: "☕",
     colour: "from-amber-800 to-stone-900",
-    imageUrl: "https://images.unsplash.com/photo-1549746015-20e5e06e0895?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400&q=80",
   },
 ];
 
