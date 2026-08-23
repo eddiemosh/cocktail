@@ -23,14 +23,14 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### With file storage (local/simple hosting)
 
-Deploy normally — orders are stored in `data/orders.json` on the server.  
-**Note:** Vercel's serverless functions have ephemeral storage; data resets on cold starts.
+For local development, orders are stored in `data/orders.json`.
+Vercel's serverless filesystem is read-only, so production deployments must use Vercel KV.
 
 ### With Vercel KV (recommended for Vercel)
 
 1. In your Vercel project dashboard, go to **Storage → Create Database → KV**
 2. Link the database to your project (this adds `KV_REST_API_URL` and `KV_REST_API_TOKEN` env vars automatically)
-3. Deploy — orders will be persisted in Redis
+3. Redeploy — orders will be persisted in Redis
 
 ```bash
 npm i -g vercel

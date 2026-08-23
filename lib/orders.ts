@@ -11,6 +11,7 @@ export interface Order {
 }
 
 const KV_KEY = "cocktail:orders";
+let inMemoryOrders: Order[] = [];
 
 // ---------------------------------------------------------------------------
 // KV helpers (Vercel KV / @vercel/kv)
@@ -18,6 +19,10 @@ const KV_KEY = "cocktail:orders";
 
 async function kvAvailable(): Promise<boolean> {
   return !!(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+}
+
+function fileStorageAvailable(): boolean {
+  return process.env.VERCEL !== "1";
 }
 
 async function getOrdersFromKV(): Promise<Order[]> {
@@ -56,14 +61,16 @@ function saveOrdersToFile(orders: Order[]): void {
 
 export async function getOrders(): Promise<Order[]> {
   if (await kvAvailable()) return getOrdersFromKV();
-  return getOrdersFromFile();
+  if (fileStorageAvailable()) return getOrdersFromFile();
+  return inMemoryOrders;
 }
 
 export async function addOrder(order: Order): Promise<void> {
   const orders = await getOrders();
   orders.push(order);
   if (await kvAvailable()) await saveOrdersToKV(orders);
-  else saveOrdersToFile(orders);
+  else if (fileStorageAvailable()) saveOrdersToFile(orders);
+  else inMemoryOrders = orders;
 }
 
 export async function updateOrderStatus(
@@ -75,6 +82,7 @@ export async function updateOrderStatus(
   if (idx === -1) return false;
   orders[idx].status = status;
   if (await kvAvailable()) await saveOrdersToKV(orders);
-  else saveOrdersToFile(orders);
+  else if (fileStorageAvailable()) saveOrdersToFile(orders);
+  else inMemoryOrders = orders;
   return true;
 }
