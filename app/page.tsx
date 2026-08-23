@@ -53,6 +53,10 @@ export default function Home() {
       setError("Please enter your name");
       return;
     }
+    if (!selected) {
+      setError("Please choose a cocktail first");
+      return;
+    }
     setError(null);
     setSubmitting(true);
     try {
@@ -61,16 +65,24 @@ export default function Home() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: name.trim(),
-          baseCocktail: selected!.id,
+          baseCocktail: selected.id,
           customisations,
         }),
       });
-      if (!res.ok) throw new Error("Failed to place order");
-      const order = await res.json();
+      const payload = await res.json().catch(() => null);
+      if (!res.ok) {
+        throw new Error(payload?.error ?? "Failed to place order");
+      }
+      if (!payload?.id) throw new Error("The order could not be confirmed");
+      const order = payload;
       setOrderId(order.id);
       setStep("done");
-    } catch {
-      setError("Something went wrong. Please try again.");
+    } catch (submissionError) {
+      setError(
+        submissionError instanceof Error
+          ? submissionError.message
+          : "Something went wrong. Please try again."
+      );
     } finally {
       setSubmitting(false);
     }
