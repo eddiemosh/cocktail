@@ -86,19 +86,19 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-950 via-purple-900 to-indigo-950">
+    <div className="min-h-screen bg-stone-50">
       {/* Header */}
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-black/30 border-b border-white/10">
+      <header className="sticky top-0 z-50 border-b border-stone-200 bg-white/90 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
           <button onClick={handleReset} className="flex items-center gap-2 cursor-pointer">
             <span className="text-2xl">🍹</span>
-            <span className="text-white font-bold text-xl tracking-tight">
+            <span className="text-slate-900 font-bold text-xl tracking-tight">
               Cocktail Bar
             </span>
           </button>
           <Link
             href="/orders"
-            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium px-4 py-2 rounded-full transition"
+            className="flex items-center gap-2 border border-stone-300 bg-white hover:bg-stone-100 text-slate-700 text-sm font-medium px-4 py-2 rounded-lg transition"
           >
             <span>📋</span> Kitchen View
           </Link>
@@ -110,10 +110,10 @@ export default function Home() {
         {step === "select" && (
           <div>
             <div className="text-center mb-10">
-              <h1 className="text-4xl font-bold text-white mb-3">
+              <h1 className="text-4xl font-bold text-slate-900 mb-3">
                 Welcome to the Bar! 🍸
               </h1>
-              <p className="text-purple-200 text-lg">
+              <p className="text-slate-500 text-lg">
                 Choose your base cocktail to get started
               </p>
             </div>
@@ -122,7 +122,7 @@ export default function Home() {
                 <button
                   key={cocktail.id}
                   onClick={() => handleSelectBase(cocktail)}
-                  className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer border border-white/10 hover:border-white/30 transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 text-left"
+                  className="group relative overflow-hidden rounded-xl shadow-sm cursor-pointer border border-stone-200 bg-white hover:border-amber-400 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-amber-400 text-left"
                 >
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
@@ -133,17 +133,17 @@ export default function Home() {
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div
-                      className={`absolute inset-0 bg-gradient-to-t ${cocktail.colour} opacity-60`}
+                      className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent"
                     />
                     <div className="absolute top-3 right-3 text-3xl">
                       {cocktail.emoji}
                     </div>
                   </div>
-                  <div className="p-4 bg-white/5 backdrop-blur-sm">
-                    <h2 className="text-white font-bold text-lg">
+                  <div className="p-4 bg-white">
+                    <h2 className="text-slate-900 font-bold text-lg">
                       {cocktail.name}
                     </h2>
-                    <p className="text-purple-200 text-sm mt-1">
+                    <p className="text-slate-500 text-sm mt-1">
                       {cocktail.description}
                     </p>
                   </div>
@@ -158,7 +158,7 @@ export default function Home() {
           <div>
             <button
               onClick={() => setStep("select")}
-              className="flex items-center gap-2 text-purple-300 hover:text-white mb-6 transition cursor-pointer"
+              className="flex items-center gap-2 text-slate-500 hover:text-slate-900 mb-6 transition cursor-pointer"
             >
               ← Back to cocktails
             </button>
@@ -173,10 +173,10 @@ export default function Home() {
                 />
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-white">
+                <h1 className="text-3xl font-bold text-slate-900">
                   {selected.emoji} {selected.name}
                 </h1>
-                <p className="text-purple-200">{selected.description}</p>
+                <p className="text-slate-500">{selected.description}</p>
               </div>
             </div>
 
@@ -184,12 +184,12 @@ export default function Home() {
               {CUSTOMISATION_GROUPS.map((group) => (
                 <div
                   key={group.id}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                  className="bg-white rounded-xl p-6 border border-stone-200 shadow-sm"
                 >
-                  <h3 className="text-white font-semibold text-lg mb-4">
+                  <h3 className="text-slate-900 font-semibold text-lg mb-4">
                     {group.label}
                     {group.type === "multi" && (
-                      <span className="ml-2 text-xs text-purple-300 font-normal">
+                        <span className="ml-2 text-xs text-slate-400 font-normal">
                         (pick any)
                       </span>
                     )}
@@ -207,8 +207,8 @@ export default function Home() {
                           }
                           className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium border transition cursor-pointer ${
                             active
-                              ? "bg-white text-purple-900 border-white"
-                              : "bg-white/10 text-white border-white/20 hover:bg-white/20"
+                              ? "bg-amber-400 text-slate-950 border-amber-400"
+                              : "bg-white text-slate-700 border-stone-300 hover:bg-stone-50"
                           }`}
                         >
                           {option.emoji && (
@@ -223,8 +223,8 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="mt-8 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <label className="block text-white font-semibold text-lg mb-3">
+            <div className="mt-8 bg-white rounded-xl p-6 border border-stone-200 shadow-sm">
+              <label className="block text-slate-900 font-semibold text-lg mb-3">
                 Your Name
               </label>
               <input
@@ -232,7 +232,7 @@ export default function Home() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name..."
-                className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-400 text-lg"
+                className="w-full bg-white border border-stone-300 rounded-lg px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-400 text-lg"
               />
             </div>
 
@@ -243,7 +243,7 @@ export default function Home() {
             <div className="mt-6 flex gap-4">
               <button
                 onClick={() => setStep("confirm")}
-                className="flex-1 bg-purple-500 hover:bg-purple-400 text-white font-bold py-4 rounded-2xl text-lg transition cursor-pointer"
+                className="flex-1 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold py-4 rounded-lg text-lg transition cursor-pointer"
               >
                 Review Order 👀
               </button>
@@ -256,16 +256,16 @@ export default function Home() {
           <div>
             <button
               onClick={() => setStep("customise")}
-              className="flex items-center gap-2 text-purple-300 hover:text-white mb-6 transition cursor-pointer"
+              className="flex items-center gap-2 text-slate-500 hover:text-slate-900 mb-6 transition cursor-pointer"
             >
               ← Edit order
             </button>
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 max-w-xl mx-auto">
-              <h2 className="text-2xl font-bold text-white mb-6 text-center">
+            <div className="bg-white rounded-xl p-8 border border-stone-200 shadow-sm max-w-xl mx-auto">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">
                 Order Summary 🧾
               </h2>
 
-              <div className="flex items-center gap-4 mb-6 pb-6 border-b border-white/10">
+                <div className="flex items-center gap-4 mb-6 pb-6 border-b border-stone-200">
                 <div className="relative w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
                   <Image
                     src={selected.imageUrl}
@@ -276,8 +276,8 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <p className="text-purple-300 text-sm">Base Cocktail</p>
-                  <p className="text-white font-bold text-xl">
+                  <p className="text-slate-500 text-sm">Base Cocktail</p>
+                  <p className="text-slate-900 font-bold text-xl">
                     {selected.emoji} {selected.name}
                   </p>
                 </div>
@@ -292,17 +292,17 @@ export default function Home() {
                 if (labels.length === 0) return null;
                 return (
                   <div key={group.id} className="mb-4">
-                    <p className="text-purple-300 text-sm">{group.label}</p>
-                    <p className="text-white font-medium">
+                    <p className="text-slate-500 text-sm">{group.label}</p>
+                    <p className="text-slate-900 font-medium">
                       {labels.join(", ")}
                     </p>
                   </div>
                 );
               })}
 
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <p className="text-purple-300 text-sm">Order for</p>
-                <p className="text-white font-bold text-xl">
+              <div className="mt-6 pt-6 border-t border-stone-200">
+                <p className="text-slate-500 text-sm">Order for</p>
+                <p className="text-slate-900 font-bold text-xl">
                   {name || <span className="text-red-400">No name!</span>}
                 </p>
               </div>
@@ -314,7 +314,7 @@ export default function Home() {
               <button
                 onClick={handleSubmit}
                 disabled={submitting}
-                className="mt-8 w-full bg-green-500 hover:bg-green-400 disabled:opacity-50 text-white font-bold py-4 rounded-2xl text-lg transition cursor-pointer"
+                className="mt-8 w-full bg-amber-400 hover:bg-amber-300 disabled:opacity-50 text-slate-950 font-bold py-4 rounded-lg text-lg transition cursor-pointer"
               >
                 {submitting ? "Placing order..." : "Place Order 🚀"}
               </button>
@@ -326,25 +326,25 @@ export default function Home() {
         {step === "done" && (
           <div className="text-center py-16">
             <div className="text-7xl mb-6">🎉</div>
-            <h2 className="text-3xl font-bold text-white mb-3">
+            <h2 className="text-3xl font-bold text-slate-900 mb-3">
               Order Placed!
             </h2>
-            <p className="text-purple-200 text-lg mb-2">
+            <p className="text-slate-600 text-lg mb-2">
               Your cocktail is being made, <strong>{name}</strong>!
             </p>
-            <p className="text-purple-400 text-sm mb-10">
+            <p className="text-slate-500 text-sm mb-10">
               Order #{orderId?.slice(0, 8)}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={handleReset}
-                className="bg-purple-500 hover:bg-purple-400 text-white font-bold px-8 py-3 rounded-2xl text-lg transition cursor-pointer"
+                className="bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold px-8 py-3 rounded-lg text-lg transition cursor-pointer"
               >
                 Order Another 🍹
               </button>
               <Link
                 href="/orders"
-                className="bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-3 rounded-2xl text-lg transition"
+                className="border border-stone-300 bg-white hover:bg-stone-100 text-slate-700 font-bold px-8 py-3 rounded-lg text-lg transition"
               >
                 View All Orders 📋
               </Link>
