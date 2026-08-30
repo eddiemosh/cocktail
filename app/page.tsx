@@ -248,8 +248,13 @@ export default function Home() {
                 >
                   <h3 className="text-slate-900 font-semibold text-lg mb-4">
                     {group.label}
-                    {group.type === "multi" && (
-                        <span className="ml-2 text-xs text-slate-400 font-normal">
+                    {(group.id === "flavours" || group.id === "garnish") && (
+                      <span className="ml-2 text-xs text-amber-600 font-normal bg-amber-50 px-2 py-1 rounded-full inline-block">
+                        Optional
+                      </span>
+                    )}
+                    {group.type === "multi" && group.id !== "flavours" && group.id !== "garnish" && (
+                      <span className="ml-2 text-xs text-slate-400 font-normal">
                         (pick any)
                       </span>
                     )}
