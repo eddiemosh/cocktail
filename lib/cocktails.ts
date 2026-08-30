@@ -48,6 +48,14 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     imageUrl: "https://images.unsplash.com/photo-1556855810-ac404aa91e85?w=400&q=80",
   },
   {
+    id: "bellini",
+    name: "Bellini",
+    description: "Italian classic with prosecco & peach puree",
+    emoji: "🍑",
+    colour: "from-orange-300 to-pink-400",
+    imageUrl: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&q=80",
+  },
+  {
     id: "espresso-martini",
     name: "Espresso Martini",
     description: "Rich vodka & coffee cocktail",
