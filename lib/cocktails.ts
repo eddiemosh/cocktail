@@ -186,7 +186,7 @@ export const CUSTOMISATION_GROUPS: CustomisationGroup[] = [
       { id: "lemon", label: "Lemon", emoji: "🍋‍🟩" },
       { id: "strawberry", label: "Strawberry", emoji: "🍓" },
       { id: "orange", label: "Orange", emoji: "🍊" },
-      { id: "raspberry", label: "Raspberry", emoji: "🫐" },
+      { id: "raspberry", label: "Raspberry", emoji: "🍒" },
       { id: "simple-syrup", label: "Simple Syrup", emoji: "🍯" },
       { id: "vanilla", label: "Vanilla Syrup", emoji: "🌼" },
       { id: "toffee", label: "Toffee", emoji: "🍮" },
