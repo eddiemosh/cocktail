@@ -57,8 +57,8 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
   },
   {
     id: "rum-mocha",
-    name: "Rum Mocha",
-    description: "Rich coffee liqueur with dark rum & chocolate",
+    name: "Spiced Rum Mocha",
+    description: "Rich coffee liqueur with spiced dark rum & chocolate",
     emoji: "☕",
     colour: "from-amber-900 to-stone-900",
     imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80",
@@ -225,15 +225,6 @@ export const CUSTOMISATION_GROUPS: CustomisationGroup[] = [
       { id: "light-ice", label: "Light Ice", emoji: "🧊" },
       { id: "regular-ice", label: "Regular Ice", emoji: "🧊🧊" },
       { id: "extra-ice", label: "Extra Ice", emoji: "🧊🧊🧊" },
-    ],
-  },
-  {
-    id: "spice",
-    label: "Spice Level",
-    type: "single",
-    options: [
-      { id: "no-spice", label: "Not Spiced", emoji: "😊" },
-      { id: "spiced", label: "Spiced", emoji: "🌶️" },
     ],
   },
 ];
