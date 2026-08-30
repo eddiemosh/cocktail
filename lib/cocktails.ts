@@ -69,7 +69,7 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     description: "Classic rum, lime & sugar cocktail",
     emoji: "🍸",
     colour: "from-blue-300 to-cyan-500",
-    imageUrl: "https://images.unsplash.com/photo-1609318325191-aeb0b8c92db4?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&q=80",
   },
   {
     id: "mimosa",
@@ -101,7 +101,7 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     description: "Classic gin & dry vermouth cocktail",
     emoji: "🍸",
     colour: "from-blue-100 to-blue-300",
-    imageUrl: "https://images.unsplash.com/photo-1510812431401-41d2cab2707d?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1555939594-58d7cb561404?w=400&q=80",
   },
   {
     id: "gimlet",
@@ -109,7 +109,7 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     description: "Crisp gin & lime juice classic",
     emoji: "🍋",
     colour: "from-green-300 to-green-500",
-    imageUrl: "https://images.unsplash.com/photo-1618183479302-1461ae109398?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400&q=80",
   },
   {
     id: "whiskey-sour",
@@ -117,7 +117,7 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     description: "Smooth whiskey with tart lemon",
     emoji: "🥃",
     colour: "from-orange-400 to-amber-600",
-    imageUrl: "https://images.unsplash.com/photo-1608897657900-8ba6a0fd6fb0?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=400&q=80",
   },
   {
     id: "caramel-chocolate-rum",
