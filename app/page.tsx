@@ -34,6 +34,8 @@ export default function Home() {
     });
     setCustomisations(defaults);
     setStep("customise");
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function toggleOption(groupId: string, optionId: string, type: "multi" | "single") {
@@ -96,6 +98,8 @@ export default function Home() {
     setName("");
     setOrderId(null);
     setError(null);
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   return (
@@ -217,7 +221,10 @@ export default function Home() {
         {step === "customise" && selected && (
           <div>
             <button
-              onClick={() => setStep("select")}
+              onClick={() => {
+                setStep("select");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
               className="flex items-center gap-2 text-slate-500 hover:text-slate-900 mb-6 transition cursor-pointer"
             >
               ← Back to cocktails
