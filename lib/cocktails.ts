@@ -56,6 +56,14 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     imageUrl: "https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&q=80",
   },
   {
+    id: "french-75",
+    name: "French 75",
+    description: "Elegant gin, champagne, lemon & sugar cocktail",
+    emoji: "✨",
+    colour: "from-yellow-200 to-amber-300",
+    imageUrl: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&q=80",
+  },
+  {
     id: "espresso-martini",
     name: "Espresso Martini",
     description: "Rich vodka & coffee cocktail",
