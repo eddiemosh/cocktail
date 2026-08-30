@@ -72,6 +72,14 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     imageUrl: "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400&q=80",
   },
   {
+    id: "pornstar-martini",
+    name: "Pornstar Martini",
+    description: "Vodka with passionfruit, vanilla, citrus & prosecco",
+    emoji: "🍸",
+    colour: "from-yellow-300 to-orange-500",
+    imageUrl: "https://images.unsplash.com/photo-1536935338788-846bb9981813?w=400&q=80",
+  },
+  {
     id: "rum-mocha",
     name: "Spiced Rum Mocha",
     description: "Rich coffee liqueur with spiced dark rum & chocolate",
@@ -141,15 +149,15 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     description: "Decadent blend of caramel rum & chocolate with coffee",
     emoji: "🍫",
     colour: "from-amber-900 to-stone-800",
-      {
-        id: "passionfruit-mojito",
-        name: "Passionfruit Mojito",
-        description: "Tropical rum classic with passionfruit & mint",
-        emoji: "🍹",
-        colour: "from-orange-300 to-pink-500",
-        imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
-      },
     imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80",
+  },
+  {
+    id: "passionfruit-mojito",
+    name: "Passionfruit Mojito",
+    description: "Tropical rum classic with passionfruit & mint",
+    emoji: "🍹",
+    colour: "from-orange-300 to-pink-500",
+    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
   },
 ];
 
