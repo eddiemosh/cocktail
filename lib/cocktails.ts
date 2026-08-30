@@ -101,7 +101,7 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     description: "Classic gin & dry vermouth cocktail",
     emoji: "🍸",
     colour: "from-blue-100 to-blue-300",
-    imageUrl: "https://images.unsplash.com/photo-1555939594-58d7cb561404?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&q=80",
   },
   {
     id: "gimlet",
@@ -144,7 +144,7 @@ export const BASE_MOCKTAILS: BaseCocktail[] = [
     description: "Non-alcoholic lime & sugar mocktail",
     emoji: "🌿",
     colour: "from-lime-300 to-green-400",
-    imageUrl: "https://images.unsplash.com/photo-1609318325191-aeb0b8c92db4?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=400&q=80",
   },
   {
     id: "mint-limeade",
@@ -160,7 +160,7 @@ export const BASE_MOCKTAILS: BaseCocktail[] = [
     description: "Sweet strawberry & lemon mocktail",
     emoji: "🍓",
     colour: "from-pink-300 to-red-400",
-    imageUrl: "https://images.unsplash.com/photo-1553530666-ba2a8e36cd12?w=400&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1590080876-b4b329c0f2d4?w=400&q=80",
   },
   {
     id: "orange-vanilla-refresher",
