@@ -141,6 +141,14 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     description: "Decadent blend of caramel rum & chocolate with coffee",
     emoji: "🍫",
     colour: "from-amber-900 to-stone-800",
+      {
+        id: "passionfruit-mojito",
+        name: "Passionfruit Mojito",
+        description: "Tropical rum classic with passionfruit & mint",
+        emoji: "🍹",
+        colour: "from-orange-300 to-pink-500",
+        imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
+      },
     imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80",
   },
 ];
