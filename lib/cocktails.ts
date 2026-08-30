@@ -56,14 +56,6 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     imageUrl: "https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=400&q=80",
   },
   {
-    id: "orange-juice",
-    name: "Orange Juice",
-    description: "Fresh citrus orange juice",
-    emoji: "🍊",
-    colour: "from-orange-400 to-amber-600",
-    imageUrl: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=80",
-  },
-  {
     id: "rum-mocha",
     name: "Rum Mocha",
     description: "Rich coffee liqueur with dark rum & chocolate",
@@ -135,6 +127,17 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     colour: "from-amber-900 to-stone-800",
     imageUrl: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80",
   },
+];
+
+export const BASE_MOCKTAILS: BaseCocktail[] = [
+  {
+    id: "orange-juice",
+    name: "Orange Juice",
+    description: "Fresh citrus orange juice",
+    emoji: "🍊",
+    colour: "from-orange-400 to-amber-600",
+    imageUrl: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=80",
+  },
   {
     id: "virgin-daiquiri",
     name: "Virgin Daiquiri",
@@ -168,6 +171,9 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     imageUrl: "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&q=80",
   },
 ];
+
+// Combined array for backwards compatibility
+export const ALL_DRINKS = [...BASE_COCKTAILS, ...BASE_MOCKTAILS];
 
 export const CUSTOMISATION_GROUPS: CustomisationGroup[] = [
   {

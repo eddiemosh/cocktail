@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   BASE_COCKTAILS,
+  BASE_MOCKTAILS,
   CUSTOMISATION_GROUPS,
   type BaseCocktail,
 } from "@/lib/cocktails";
@@ -126,41 +127,88 @@ export default function Home() {
                 Welcome to the Bar! 🍸
               </h1>
               <p className="text-slate-500 text-lg">
-                Choose your base cocktail to get started
+                Choose your drink to get started
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {BASE_COCKTAILS.map((cocktail) => (
-                <button
-                  key={cocktail.id}
-                  onClick={() => handleSelectBase(cocktail)}
-                  className="group relative overflow-hidden rounded-xl shadow-sm cursor-pointer border border-stone-200 bg-white hover:border-amber-400 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-amber-400 text-left"
-                >
-                  <div className="relative h-48 w-full overflow-hidden">
-                    <Image
-                      src={cocktail.imageUrl}
-                      alt={cocktail.name}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div
-                      className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent"
-                    />
-                    <div className="absolute top-3 right-3 text-3xl">
-                      {cocktail.emoji}
+
+            {/* Cocktails Section */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                🍹 Cocktails
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {BASE_COCKTAILS.map((cocktail) => (
+                  <button
+                    key={cocktail.id}
+                    onClick={() => handleSelectBase(cocktail)}
+                    className="group relative overflow-hidden rounded-xl shadow-sm cursor-pointer border border-stone-200 bg-white hover:border-amber-400 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-amber-400 text-left"
+                  >
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={cocktail.imageUrl}
+                        alt={cocktail.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent"
+                      />
+                      <div className="absolute top-3 right-3 text-3xl">
+                        {cocktail.emoji}
+                      </div>
                     </div>
-                  </div>
-                  <div className="p-4 bg-white">
-                    <h2 className="text-slate-900 font-bold text-lg">
-                      {cocktail.name}
-                    </h2>
-                    <p className="text-slate-500 text-sm mt-1">
-                      {cocktail.description}
-                    </p>
-                  </div>
-                </button>
-              ))}
+                    <div className="p-4 bg-white">
+                      <h2 className="text-slate-900 font-bold text-lg">
+                        {cocktail.name}
+                      </h2>
+                      <p className="text-slate-500 text-sm mt-1">
+                        {cocktail.description}
+                      </p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Mocktails Section */}
+            <div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
+                🌿 Mocktails
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {BASE_MOCKTAILS.map((mocktail) => (
+                  <button
+                    key={mocktail.id}
+                    onClick={() => handleSelectBase(mocktail)}
+                    className="group relative overflow-hidden rounded-xl shadow-sm cursor-pointer border border-stone-200 bg-white hover:border-amber-400 hover:shadow-md transition-all focus:outline-none focus:ring-2 focus:ring-amber-400 text-left"
+                  >
+                    <div className="relative h-48 w-full overflow-hidden">
+                      <Image
+                        src={mocktail.imageUrl}
+                        alt={mocktail.name}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div
+                        className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent"
+                      />
+                      <div className="absolute top-3 right-3 text-3xl">
+                        {mocktail.emoji}
+                      </div>
+                    </div>
+                    <div className="p-4 bg-white">
+                      <h2 className="text-slate-900 font-bold text-lg">
+                        {mocktail.name}
+                      </h2>
+                      <p className="text-slate-500 text-sm mt-1">
+                        {mocktail.description}
+                      </p>
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         )}

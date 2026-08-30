@@ -3,7 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BASE_COCKTAILS, CUSTOMISATION_GROUPS } from "@/lib/cocktails";
+import { BASE_COCKTAILS, BASE_MOCKTAILS, CUSTOMISATION_GROUPS } from "@/lib/cocktails";
 import type { Order } from "@/lib/orders";
 
 export default function OrdersPage() {
@@ -46,7 +46,7 @@ export default function OrdersPage() {
   const pendingCount = orders.filter((o) => o.status === "pending").length;
 
   function getBase(id: string) {
-    return BASE_COCKTAILS.find((b) => b.id === id);
+    return BASE_COCKTAILS.find((b) => b.id === id) ?? BASE_MOCKTAILS.find((b) => b.id === id);
   }
 
   function getCustomLabel(groupId: string, optionId: string) {
