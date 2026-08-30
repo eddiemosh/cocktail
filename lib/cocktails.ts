@@ -96,14 +96,6 @@ export const BASE_COCKTAILS: BaseCocktail[] = [
     imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80",
   },
   {
-    id: "bloody-mary",
-    name: "Bloody Mary",
-    description: "Vodka with tomato juice & spicy seasonings",
-    emoji: "🍅",
-    colour: "from-red-600 to-red-800",
-    imageUrl: "https://images.unsplash.com/photo-1608897657900-8ba6a0fd6fb0?w=400&q=80",
-  },
-  {
     id: "manhattan",
     name: "Manhattan",
     description: "Smooth whiskey cocktail with vermouth & grenadine",
